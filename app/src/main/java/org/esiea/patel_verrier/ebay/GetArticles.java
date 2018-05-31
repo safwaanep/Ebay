@@ -63,7 +63,8 @@ public class GetArticles extends IntentService {
         Log.i("debug","handling action");
         URL url=null;
         try {
-            url=new URL("http://open.api.ebay.com/shopping?version=1015&appid=tototata-FindingA-PRD-066850dff-a2aff10b&callname=FindProducts&QueryKeywords=ipod&ResponseEncodingType=JSON");
+            //url=new URL("http://open.api.ebay.com/shopping?version=1015&appid=tototata-FindingA-PRD-066850dff-a2aff10b&callname=FindProducts&QueryKeywords=ipod&ResponseEncodingType=JSON");
+            url=new URL("https://pokeapi.co/api/v1/pokemon/?limit=30");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
